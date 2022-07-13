@@ -19,10 +19,8 @@ jobs:
       - run: |
           cd build/web
           git init
-          git config --global user.email pedestrianc@163.com
-          git config --global user.name 陈有昌
           git status
-          git remote add origin https://${{secrets.commit_secret}}@github.com/tizzycc/bloc.git
+          git remote add origin git@github.com:tizzycc/bloc.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
